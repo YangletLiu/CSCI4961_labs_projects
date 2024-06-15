@@ -1,9 +1,7 @@
 # CSCI4961 Labs and Projects
 
 1. File structure
-   
-     lab1
-   FinRL
+```
 ├── IBM Quantum Computing Challenge
 │   ├── lab1
 │   ├── lab2
@@ -24,4 +22,4 @@
 ├── Projects
 │   ├── xxx
 └── README.md
-   
+```  
