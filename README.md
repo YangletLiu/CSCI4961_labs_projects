@@ -1,1 +1,4 @@
-# CSCI4961_labs_projects
+# CSCI4961 Labs and Projects
+
+1. File structure
+   
