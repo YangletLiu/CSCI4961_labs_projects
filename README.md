@@ -3,11 +3,8 @@
 1. File structure
 ```
 ├── IBM Quantum Computing Challenge
-│   ├── lab1
-│   ├── lab2
-│   ├── lab3
-│   ├── lab4
-│   ├── bonus lab
+│   ├── Name1/lab1, lab2, ...
+│   ├── Name2/lab1, lab2, ...
 ├── Qiskit Global Summer School
 │   ├── week1day1
 │   ├── week1day2
