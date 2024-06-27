@@ -2,13 +2,17 @@
 
 1. File structure
 ```
-├── IBM Quantum Computing Challenge
+├──Classroom_Sharing_Qiskit_Codes
+│   ├── Name1_topic
+│   ├── Name2_topic
+├──IBM Quantum Computing Challenge
 │   ├── Name1/lab1, lab2, ...
 │   ├── Name2/lab1, lab2, ...
 ├── Qiskit Global Summer School
 │   ├── Name1_topic
 │   ├── Name2_topic
 ├── Projects
-│   ├── xxx
+│   ├── Name1_topic
+│   ├── Name2_topic
 └── README.md
 ```  
