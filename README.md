@@ -6,16 +6,8 @@
 │   ├── Name1/lab1, lab2, ...
 │   ├── Name2/lab1, lab2, ...
 ├── Qiskit Global Summer School
-│   ├── week1day1
-│   ├── week1day2
-│   ├── week1day3
-│   ├── week1day4
-│   ├── week1day5
-│   ├── week2day1
-│   ├── week2day2
-│   ├── week2day3
-│   ├── week2day4
-│   ├── week2day5
+│   ├── Name1_topic
+│   ├── Name2_topic
 ├── Projects
 │   ├── xxx
 └── README.md
