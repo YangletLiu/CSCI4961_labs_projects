@@ -1,4 +1,4 @@
-# CSCI4961 Labs and Projects, at Introduction to Quantum Computing
+# Labs and Projects of CSCI4961 Introduction to Quantum Computing
 
 1. File structure
 ```
