@@ -4,11 +4,12 @@
 
 Based on our course CSCI 4961 Introduction to quantum computing, the project aims to provide a comprehensive tutorial for >20 implementations of quantum algorithms. We may focus on Grover’s search algorithm, Shor’s algorithm, Quantum Approximate Optimization Algorithm (QAOA), Quantum Neural Networks, etc. We will demonstrate practical implementations of these algorithms using Qiskit code by guiding users through setup, the input and output conditions, and visualizations of these algorithms. Our aim is to improve the understanding and application of quantum computing for both educational and research purposes.
 
-The final deliverables
-Qiskit codes for quantum algorithms, 
-Well-documented Jupyter notebook files
-Testings on IBM System One on RPI Campus
-A report highlighting performance of the codes. 
+## Final Deliverables
+
+# Qiskit codes for quantum algorithms, 
+# Well-documented Jupyter notebook files
+# Testings on IBM System One on RPI Campus
+# Reports highlighting performance of the codes. 
 
 
 ## File structure
