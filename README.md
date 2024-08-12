@@ -6,10 +6,10 @@ Based on our course CSCI 4961 Introduction to quantum computing, the project aim
 
 ## Final Deliverables
 
-### Qiskit codes for quantum algorithms, 
+### Qiskit codes for quantum algorithms 
 ### Well-documented Jupyter notebook files
 ### Testings on IBM System One on RPI Campus
-### Reports highlighting performance of the codes. 
+### Reports highlighting performance of the codes
 
 
 ## File structure
