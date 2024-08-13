@@ -48,16 +48,6 @@ class QuantumEnv(gym.Env):
         self.action_space = spaces.Discrete(14)  # Number of possible actions
         self.observation_space = spaces.Box(low=-1, high=1, shape=(self.num_qubits * 4,))  # Example shape
 
-    def _circuit_to_state(self, circuit: QuantumCircuit) -> np.ndarray:
-        # Convert the quantum circuit to its state representation
-        simulator = Aer.get_backend('unitary_simulator')
-        result = simulator.run(transpile(circuit, simulator)).result()
-        unitary = result.get_unitary(circuit)
-
-        # Flatten the unitary matrix and normalize
-        unitary_array = np.asarray(unitary).flatten()
-        return unitary_array
-
     def reset(self):
         # Reset the quantum circuit and return initial state
         self.circuit = QuantumCircuit(self.num_qubits)
@@ -109,6 +99,16 @@ class QuantumEnv(gym.Env):
     def render(self):
         # Print the current quantum circuit
         print(self.circuit.draw())
+
+    def _circuit_to_state(self, circuit: QuantumCircuit) -> np.ndarray:
+        # Convert the quantum circuit to its state representation
+        simulator = Aer.get_backend('unitary_simulator')
+        result = simulator.run(transpile(circuit, simulator)).result()
+        unitary = result.get_unitary(circuit)
+
+        # Flatten the unitary matrix and normalize
+        unitary_array = np.asarray(unitary).flatten()
+        return unitary_array
 
 
 import torch
