@@ -1,0 +1,180 @@
+Nodes: 2
+Classical
+	Path = [0, 1] and the min distance = 2
+	Runtime: 0.000000 seconds
+Quantum Simulator	Path taken: [0, 1] and the min distance = 2
+	Execution time: 0.0681912899017334 seconds
+Quantum IBM System One	Path taken: [0, 1] and the min distance = 2
+	Execution time: 6.01661949994741 seconds
+
+Nodes: 3
+Classical
+	Path = [0, 2, 1] and the min distance = 7
+	Runtime: 0.000000 seconds
+Quantum Simulator	Path taken: [0, 2, 1] and the min distance = 7
+	Execution time: 0.04251217842102051 seconds
+Quantum IBM System One	Path taken: [0, 2, 1] and the min distance = 7
+	Execution time: 4.320255700033158 seconds
+
+Nodes: 4
+Classical
+	Path = [0, 3, 1, 2] and the min distance = 10
+	Runtime: 0.000000 seconds
+Quantum Simulator	Path taken: [0, 3, 1, 2] and the min distance = 10
+	Execution time: 0.10099554061889648 seconds
+Quantum IBM System One	Path taken: [0, 3, 1, 2] and the min distance = 10
+	Execution time: 8.69821270002285 seconds
+
+Nodes: 5
+Classical
+	Path = [0, 3, 2, 4, 1] and the min distance = 10
+	Runtime: 0.000000 seconds
+Quantum Simulator	Path taken: [0, 3, 2, 4, 1] and the min distance = 10
+	Execution time: 0.1347367763519287 seconds
+Quantum IBM System One	Path taken: [0, 3, 2, 4, 1] and the min distance = 10
+	Execution time: 6.502441499964334 seconds
+
+Nodes: 6
+Classical
+	Path = [0, 5, 3, 4, 1, 2] and the min distance = 17
+	Runtime: 0.000000 seconds
+Quantum Simulator	Path taken: [5, 3, 1, 2, 0, 4] and the min distance = 23
+	Execution time: 0.11161994934082031 seconds
+Quantum IBM System One	Path taken: [0, 2, 5, 3, 1, 4] and the min distance = 22
+	Execution time: 6.296488300024066 seconds
+
+Nodes: 7
+Classical
+	Path = [0, 6, 4, 1, 3, 2, 5] and the min distance = 20
+	Runtime: 0.002277 seconds
+Quantum Simulator	Path taken: [3, 2, 5, 4, 0, 1, 6] and the min distance = 35
+	Execution time: 0.21276354789733887 seconds
+Quantum IBM System One	Path taken: [6, 1, 3, 0, 5, 2, 4] and the min distance = 28
+	Execution time: 3.0360865000402555 seconds
+
+Nodes: 8
+Classical
+	Path = [0, 4, 7, 1, 5, 6, 3, 2] and the min distance = 24
+	Runtime: 0.000000 seconds
+Quantum Simulator	Path taken: [0, 6, 4, 2, 5, 3, 1, 7] and the min distance = 46
+	Execution time: 0.1166677474975586 seconds
+Quantum IBM System One	Path taken: [2, 0, 3, 5, 1, 4, 7, 6] and the min distance = 26
+	Execution time: 8.522887300001457 seconds
+
+Nodes: 9
+Classical
+	Path = [0, 8, 3, 2, 7, 5, 4, 6, 1] and the min distance = 25
+	Runtime: 0.000000 seconds
+Quantum Simulator	Path taken: [2, 0, 1, 6, 7, 4, 3, 5, 8] and the min distance = 63
+	Execution time: 0.0961306095123291 seconds
+Quantum IBM System One	Path taken: [8, 0, 4, 5, 7, 6, 2, 3, 1] and the min distance = 47
+	Execution time: 5.617918800038751 seconds
+
+Nodes: 10
+Classical
+	Path = [0, 5, 3, 4, 2, 9, 8, 7, 6, 1] and the min distance = 30
+	Runtime: 0.038163 seconds
+Quantum Simulator	Path taken: [9, 3, 6, 5, 1, 0, 8, 7, 4, 2] and the min distance = 57
+	Execution time: 0.394728422164917 seconds
+Quantum IBM System One	Path taken: [8, 4, 2, 9, 6, 1, 5, 7, 3, 0] and the min distance = 60
+	Execution time: 6.036444799974561 seconds
+
+Nodes: 11
+Classical
+	Path = [0, 9, 8, 10, 7, 2, 5, 6, 1, 4, 3] and the min distance = 23
+	Runtime: 0.041790 seconds
+Quantum Simulator	Path taken: [4, 7, 10, 2, 3, 1, 8, 9, 0, 6, 5] and the min distance = 54
+	Execution time: 0.2805783748626709 seconds
+Quantum IBM System One	Path taken: [1, 2, 5, 7, 3, 9, 4, 0, 6, 10, 8] and the min distance = 57
+	Execution time: 6.5457098000333644 seconds
+
+Nodes: 12
+Classical
+	Path = [0, 8, 4, 2, 10, 9, 3, 7, 1, 5, 11, 6] and the min distance = 29
+	Runtime: 0.047123 seconds
+Quantum Simulator	Path taken: [7, 5, 6, 8, 1, 10, 11, 4, 9, 0, 3, 2] and the min distance = 91
+	Execution time: 0.16087961196899414 seconds
+Quantum IBM System One	Path taken: [2, 11, 10, 6, 9, 4, 8, 7, 0, 3, 1, 5] and the min distance = 92
+	Execution time: 6.50344950001454 seconds
+
+Nodes: 13
+Classical
+	Path = [0, 4, 7, 10, 2, 8, 5, 12, 6, 9, 11, 1, 3] and the min distance = 41
+	Runtime: 0.244227 seconds
+Quantum Simulator	Path taken: [10, 9, 2, 0, 4, 12, 5, 1, 11, 8, 3, 7, 6] and the min distance = 82
+	Execution time: 0.1777966022491455 seconds
+Quantum IBM System One	Path taken: [1, 3, 11, 9, 2, 10, 4, 7, 8, 5, 6, 0, 12] and the min distance = 73
+	Execution time: 7.427470099995844 seconds
+
+Nodes: 14
+Classical
+	Path = [0, 8, 6, 7, 9, 10, 2, 3, 13, 11, 12, 4, 1, 5] and the min distance = 44
+	Runtime: 0.346970 seconds
+Quantum Simulator	Path taken: [7, 2, 11, 13, 10, 5, 0, 3, 12, 8, 4, 1, 6, 9] and the min distance = 100
+	Execution time: 0.2499079704284668 seconds
+Quantum IBM System One	Path taken: [5, 9, 1, 8, 6, 13, 3, 10, 0, 2, 12, 4, 7, 11] and the min distance = 116
+	Execution time: 6.2866949000163 seconds
+
+Nodes: 15
+Classical
+	Path = [0, 7, 10, 2, 6, 4, 9, 13, 12, 5, 8, 11, 14, 1, 3] and the min distance = 47
+	Runtime: 1.435167 seconds
+Quantum Simulator	Path taken: [2, 1, 4, 11, 13, 6, 3, 5, 14, 7, 9, 12, 8, 0, 10] and the min distance = 141
+	Execution time: 0.17066311836242676 seconds
+Quantum IBM System One	Path taken: [10, 8, 4, 3, 6, 14, 9, 1, 2, 5, 7, 13, 12, 0, 11] and the min distance = 145
+	Execution time: 3.445080500037875 seconds
+
+Nodes: 16
+Classical
+	Path = [0, 8, 3, 4, 11, 2, 5, 13, 9, 6, 15, 10, 14, 1, 12, 7] and the min distance = 48
+	Runtime: 1.018451 seconds
+Quantum Simulator	Path taken: [3, 10, 4, 14, 11, 1, 7, 5, 0, 2, 6, 9, 8, 12, 15, 13] and the min distance = 169
+	Execution time: 0.4341244697570801 seconds
+Quantum IBM System One	Path taken: [10, 7, 8, 2, 6, 13, 11, 15, 5, 0, 1, 14, 4, 3, 12, 9] and the min distance = 170
+	Execution time: 4.728620199952275 seconds
+
+Nodes: 17
+Classical
+	Path = [0, 12, 10, 5, 8, 4, 6, 7, 11, 15, 2, 16, 13, 9, 14, 1, 3] and the min distance = 40
+	Runtime: 5.735722 seconds
+Quantum Simulator	Path taken: [8, 7, 10, 4, 14, 15, 0, 16, 12, 2, 9, 5, 1, 11, 13, 6, 3] and the min distance = 160
+	Execution time: 0.16996049880981445 seconds
+Quantum IBM System One	Path taken: [14, 5, 16, 7, 2, 12, 1, 11, 10, 8, 15, 0, 9, 3, 13, 4, 6] and the min distance = 162
+	Execution time: 5.315120899991598 seconds
+
+Nodes: 18
+Classical
+	Path = [0, 14, 15, 4, 10, 9, 12, 1, 3, 6, 11, 13, 2, 16, 17, 7, 8, 5] and the min distance = 54
+	Runtime: 11.612012 seconds
+Quantum Simulator	Path taken: [16, 6, 10, 2, 7, 8, 12, 5, 13, 0, 9, 17, 4, 3, 1, 11, 14, 15] and the min distance = 196
+	Execution time: 0.1825883388519287 seconds
+Quantum IBM System One	Path taken: [7, 14, 9, 11, 5, 3, 6, 2, 12, 4, 1, 8, 16, 15, 0, 10, 13, 17] and the min distance = 209
+	Execution time: 4.670040199998766 seconds
+
+Nodes: 19
+Classical
+	Path = [0, 7, 1, 9, 14, 5, 15, 10, 4, 11, 16, 12, 6, 13, 8, 17, 18, 2, 3] and the min distance = 51
+	Runtime: 38.090061 seconds
+Quantum Simulator	Path taken: [10, 18, 15, 1, 5, 12, 6, 11, 2, 7, 8, 4, 14, 16, 3, 0, 17, 13, 9] and the min distance = 182
+	Execution time: 0.2158057689666748 seconds
+Quantum IBM System One	Path taken: [5, 14, 17, 12, 15, 16, 18, 9, 11, 1, 2, 13, 3, 7, 6, 0, 4, 8, 10] and the min distance = 216
+	Execution time: 6.647096400032751 seconds
+
+Nodes: 20
+Classical
+	Path = [0, 6, 16, 15, 19, 17, 8, 10, 18, 13, 11, 12, 9, 5, 1, 7, 14, 3, 2, 4] and the min distance = 55
+	Runtime: 51.410327 seconds
+Quantum Simulator	Path taken: [10, 11, 6, 1, 15, 0, 16, 17, 14, 9, 7, 4, 18, 5, 12, 3, 13, 2, 19, 8] and the min distance = 216
+	Execution time: 0.34632110595703125 seconds
+Quantum IBM System One	Path taken: [10, 7, 11, 15, 19, 8, 12, 3, 2, 14, 13, 4, 5, 16, 1, 0, 18, 9, 6, 17] and the min distance = 213
+	Execution time: 5.752555100014433 seconds
+
+Nodes: 21
+Classical
+	Path = [0, 12, 16, 17, 7, 9, 8, 5, 6, 19, 13, 11, 14, 18, 3, 4, 20, 15, 1, 10, 2] and the min distance = 49
+	Runtime: 118.919393 seconds
+Quantum Simulator	Path taken: [3, 10, 1, 11, 13, 8, 4, 5, 0, 17, 12, 2, 7, 18, 14, 15, 16, 6, 20, 9, 19] and the min distance = 257
+	Execution time: 0.8322784900665283 seconds
+Quantum IBM System One	Path taken: [19, 2, 6, 1, 3, 16, 9, 18, 17, 11, 10, 14, 7, 12, 8, 5, 15, 13, 4, 0, 20] and the min distance = 272
+	Execution time: 4.846119399997406 seconds
+
