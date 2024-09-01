@@ -24,7 +24,7 @@ algorithm_globals.random_seed = 42
 manual_seed(42)
 
 # IBM Quantum Backend Setup
-#service = QiskitRuntimeService(channel="ibm_quantum", token="e68f88c24b3afc0137bc62514650ebafb5670c1be2813268e8efded4942faa8b60e6d6bebba2cb521ddd1331d372dbecbbe7dd68ef219aaef5080cb053069838")
+#service = QiskitRuntimeService(channel="ibm_quantum", token="token")
 #backend = service.least_busy(simulator=False, operational=True)
 
 # Data preparation
