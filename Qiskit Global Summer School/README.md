@@ -1,0 +1,3 @@
+# Qiskit Global Summer School (QGSS)
+
+From July 15th, 2024 to July 26th, 2024 (7/15/2024-7/26/2024), students engaged in a two-week intensive summer program designed to give a comprehensive overview of foundational quantum computing topics. The first week focused on Qiskit and running quantum circuits on noisy quantum hardware while the second week focused on quantum applications, specifically mapping problems to qubits, quantum combinatorial optimization, Hamiltonian applications/simulation, and quantum machine learning. With supplemented hands-on labs, our students enhanced their theoretical and practical skills, preparing them for the application of quantum computing in the real world. 
