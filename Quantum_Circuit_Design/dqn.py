@@ -58,12 +58,11 @@ class QuantumEnv(gym.Env):
     def __init__(self):
         super(QuantumEnv, self).__init__()
 
-        self.num_qubits = 2
+        self.num_qubits = 3
         self.circuit = QuantumCircuit(self.num_qubits)
-        self.target_unitary = bell_state_unitary
+        self.target_unitary = ghz_circuit
 
         # Define action and observation space
-        self.action_space = spaces.Discrete(14)  # Number of possible actions
         self.observation_space = spaces.Box(low=-1, high=1, shape=(self.num_qubits * 4,))
 
     def _circuit_to_state(self, circuit: QuantumCircuit) -> np.ndarray:
@@ -74,30 +73,30 @@ class QuantumEnv(gym.Env):
 
             # Flatten the unitary matrix and normalize
             unitary_array = np.asarray(unitary).flatten()
-            print(len(unitary),len(unitary_array))
-            return unitary
+            return unitary_array
 
     def reset(self):
         self.circuit = QuantumCircuit(self.num_qubits)
         return self._circuit_to_state(self.circuit)
 
+    def generate_actions(self,num_qubits):
+        gates = [HGate(), SGate()]  # Single-qubit gates
+        possible_actions = []
+
+        # Single-qubit gate actions
+        for gate in gates:
+            for qubit in range(num_qubits):
+                possible_actions.append([gate, [qubit]])
+
+        # Two-qubit CX (CNOT) gate actions
+        for control_qubit in range(num_qubits):
+            for target_qubit in range(num_qubits):
+                if control_qubit != target_qubit:
+                    possible_actions.append([CXGate(), [control_qubit, target_qubit]])
+                    
+        return possible_actions
     def step(self, action):
-        possible_actions = [
-            [HGate(), [0]],
-            [HGate(), [1]],
-            [CXGate(), [0, 1]],
-            [CXGate(), [1, 0]],
-            [SGate(), [0]],
-            [SGate(), [1]],
-            [TGate(), [0]],
-            [TGate(), [1]],
-            [XGate(), [0]],
-            [XGate(), [1]],
-            [YGate(), [0]],
-            [YGate(), [1]],
-            [ZGate(), [0]],
-            [ZGate(), [1]],
-        ]
+        possible_actions = self.generate_actions(self.num_qubits)
         self.circuit.append(possible_actions[action][0], possible_actions[action][1])
         state = self._circuit_to_state(self.circuit)
         reward, done = self._reward(self.target_unitary)
@@ -115,7 +114,6 @@ class QuantumEnv(gym.Env):
 
         reward = -5 * self.circuit.size()
         done = False
-        reward += fidelity
         if fidelity > 0.99:
             done = True
             reward += 300
@@ -295,7 +293,7 @@ def test_agent(agent, environment, episodes, max_steps_per_episode):
 
 if __name__ == "__main__":
     environment = QuantumEnv()
-    agent = DQNAgent(state_size=16, action_size=14, alpha=0.1, gamma=0.95, epsilon=0.9, epsilon_min=0.05, epsilon_decay=0.995, batch_size=64, buffer_size=10000)
+    agent = DQNAgent(state_size=64, action_size=12, alpha=0.1, gamma=0.95, epsilon=0.9, epsilon_min=0.05, epsilon_decay=0.995, batch_size=64, buffer_size=10000)
     print("Training")
     train_agent(agent, environment, episodes=20000, max_steps_per_episode=20)
     print("Testing")

@@ -21,44 +21,26 @@ from qiskit.quantum_info import Operator
 import matplotlib.pyplot as plt
 import csv
 
-swap_matrix = np.array([
-    [1, 0, 0, 0],
-    [0, 0, 1, 0],
-    [0, 1, 0, 0],
-    [0, 0, 0, 1]
-])
-H = np.array([[1, 1], [1, -1]]) / np.sqrt(2)
-X = np.array([[0, 1], [1, 0]])
-Z = np.array([[1, 0], [0, -1]])
-CNOT = np.array([
-    [1, 0, 0, 0],
-    [0, 1, 0, 0],
-    [0, 0, 0, 1],
-    [0, 0, 1, 0]
-])
-bell_state_unitary = Operator(CNOT) @ Operator(np.kron(H, np.eye(2)))
+from circuits import ghz_circuit, bell_state_unitary, cz_matrix, swap_matrix, psi_plus, psi_minus, phi_minus,text_circuit1,test_circuit
 
 class QuantumEnv(gym.Env):
-    def __init__(self):
+    def __init__(self, target_circuit=bell_state_unitary, num_qubits = 2):
         super(QuantumEnv, self).__init__()
 
         self.env_name = 'Quantum-v1'
-        self.num_qubits = 2
+        self.target_unitary = target_circuit
+        self.num_qubits = num_qubits
         self.circuit = QuantumCircuit(self.num_qubits)
-        self.target_unitary = bell_state_unitary
-        # Define action and observation space
-        self.action_space = spaces.Discrete(4)  # Number of possible actions
-        self.observation_space = spaces.Box(low=-1, high=1, shape=(self.num_qubits * 4,))
 
     def _circuit_to_state(self, circuit: QuantumCircuit) -> np.ndarray:
-            # Placeholder feature extraction: flatten the unitary matrix of the circuit
-            simulator = Aer.get_backend('unitary_simulator')
-            result = simulator.run(transpile(circuit, simulator)).result()
-            unitary = result.get_unitary(circuit)
+        # Placeholder feature extraction: flatten the unitary matrix of the circuit
+        simulator = Aer.get_backend('unitary_simulator')
+        result = simulator.run(transpile(circuit, simulator)).result()
+        unitary = result.get_unitary(circuit)
 
-            # Flatten the unitary matrix and normalize
-            unitary_array = np.asarray(unitary).flatten()
-            return unitary_array
+        # Flatten the unitary matrix and normalize
+        unitary_array = np.asarray(unitary).flatten()
+        return unitary_array
 
     def reset(self):
         self.circuit = QuantumCircuit(self.num_qubits)
@@ -66,23 +48,24 @@ class QuantumEnv(gym.Env):
         info_dict = {'gate_count': self.circuit.size(), 'fidelity': 0.0}  # Optional info
         return state, info_dict
 
+    def generate_actions(self,num_qubits):
+        gates = [HGate(), SGate()]  # Single-qubit gates
+        possible_actions = []
+
+        # Single-qubit gate actions
+        for gate in gates:
+            for qubit in range(num_qubits):
+                possible_actions.append([gate, [qubit]])
+
+        # Two-qubit CX (CNOT) gate actions
+        for control_qubit in range(num_qubits):
+            for target_qubit in range(num_qubits):
+                if control_qubit != target_qubit:
+                    possible_actions.append([CXGate(), [control_qubit, target_qubit]])
+                    
+        return possible_actions
     def step(self, action):
-        possible_actions = [
-            [HGate(), [0]],
-            [HGate(), [1]],
-            [CXGate(), [0, 1]],
-            [CXGate(), [1, 0]],
-            [SGate(), [0]],
-            [SGate(), [1]],
-            [TGate(), [0]],
-            [TGate(), [1]],
-            [XGate(), [0]],
-            [XGate(), [1]],
-            [YGate(), [0]],
-            [YGate(), [1]],
-            [ZGate(), [0]],
-            [ZGate(), [1]]
-        ]
+        possible_actions = self.generate_actions(self.num_qubits)
         self.circuit.append(possible_actions[action][0], possible_actions[action][1])
         state = self._circuit_to_state(self.circuit)
         reward, done, truncated = self._reward(self.target_unitary)
@@ -110,8 +93,8 @@ class QuantumEnv(gym.Env):
         if fidelity > 0.99:
             done = True
             reward += 1000
-            # self.render()
-            # print("reward:",reward)
+            self.render()
+            print("reward:",reward)
         return reward, done, truncated
     
     def render(self):
@@ -250,7 +233,7 @@ def build_env(env_class=None, env_args=None):
         env = env_class(id=env_args['env_name'])
     else:
         env = env_class(**kwargs_filter(env_class.__init__, env_args.copy()))
-    for attr_str in ('env_name', 'state_dim', 'action_dim', 'if_discrete'):
+    for attr_str in ('env_name', 'state_dim', 'action_dim', 'if_discrete','target_circuit','num_qubits'):
         setattr(env, attr_str, env_args[attr_str])
     return env
 
@@ -684,7 +667,7 @@ def train_agent(args: Config):
     else:
         buffer = []
     '''start training'''
-    while True:
+    for i in range(100):
         buffer_items = agent.explore_env(env, args.horizon_len)
         if args.if_off_policy:
             buffer.update(buffer_items)
@@ -692,9 +675,6 @@ def train_agent(args: Config):
             buffer[:] = buffer_items
 
         logging_tuple = agent.update_net(buffer)
-        evaluator.evaluate_and_save(agent.act, args.horizon_len, logging_tuple)
-        if (evaluator.total_step > args.break_step) or os.path.exists(f"{args.cwd}/stop"):
-            break  # stop training when reach `break_step` or `mkdir cwd/stop`
     evaluator.close()
 
 
@@ -716,11 +696,16 @@ def valid_agent(env_class, env_args: dict, net_dims: List[int], agent_class, act
 def train_dqn_for_quantum(gpu_id: int = 0):
     # Replace env_class with QuantumEnv
     env_class = QuantumEnv
+    target_circuit = text_circuit1
+    num_qubits = 3
+    
     env_args = {
         'env_name': 'Quantum-v1',  # Custom environment name
-        'state_dim': 16,  # QuantumEnv outputs a flattened unitary of size 2 * 4 (assuming 2 qubits)
-        'action_dim':14,  # Number of possible quantum actions (gates)
+        'state_dim': 4**num_qubits,  # QuantumEnv outputs a flattened unitary of size 2 * 4 (assuming 2 qubits)
+        'action_dim':2*num_qubits+num_qubits*(num_qubits-1),  # Number of possible quantum actions (gates)
         'if_discrete': True,  # Discrete action space
+        'target_circuit': target_circuit,
+        'num_qubits': num_qubits
     }
 
     # Use AgentDQN as in the original file
