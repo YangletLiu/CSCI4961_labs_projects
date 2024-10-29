@@ -61,13 +61,39 @@ The emerging field of quantum computing offers the opportunity for new career pa
     
 **Intermediate modules (Algorithms)**
   - Deutsch's
+    - Introduce Deutsch's algorithm, problem statement (constant vs. balanced function), and its significance in quantum computing.
+    - Provide step-by-step code implementation with visualizations.
+    - Show how to interpret results and compare classical vs. quantum runtime/solutions.
   - Bernstein's
+    - Describe Bernstein-Vazirani algorithm, problem statement (querying hidden string), and classical approach.
+    - Provide step-by-step code implementation with visualizations.
+    - Show how to interpret results and compare classical vs. quantum runtime/solutions.
   - Variational Quantum Eigensolver (VQE)
+    - Introduce VQE and its application in finding the ground state energy of quantum systems.
+    - Provide step-by-step code implementation with visualizations.
+    - Present the results and discuss convergence and accuracy of the VQE method.
   - Quantum Approximation Optimization Algorithm (QAOA)
+    - Explain QAOA and its use in combinatorial optimization problems.
+    - Provide code snippets to implement QAOA for a sample optimization problem (e.g., Max Cut)
+    - Analyze results and compare with classical optimization techniques.
   - Grover's
+    - Introduce Grover's algorithm, problem statement (unstructured search problem), and speedup.
+    - Include demonstration of oracle and diffusion operator.
+    - Visualize measurement outcomes and probability of finding solution vs. classical methods.
   - Shor's
+    - Describe Shor's algorithm, problem statement (factoring large integers), and implication for cryptography.
+    - Guide through steps to implement for small to large integers.
+    - Discuss Quantum Fourier Transform.
+    - Analyze and visualize output.
   - Quantum Key Distribution (QKD)
+    - Introduce concept of QKD and importance for secure communication.
+    - Provide example of simulating QKD.
+    - Analyze security, potential vulnerabilities, and real-world applications.
   - Error Correction
+    - Explain necessity of quantum error correction in maintaining qubit fidelity.
+    - Introduce common error codes (e.g., CSS, Steane).
+    - Provide code examples and visualizations for implementations of encoding and decoding.
+    - Analyze reduction in error and discuss challenges in research.
 #### <ins>01/01/2025 - 04/01/2025</ins>
 **Advanced modules (Applications)**
   - Simulation
