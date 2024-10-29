@@ -59,7 +59,7 @@ The emerging field of quantum computing offers the opportunity for new career pa
     - Create a simple oracle function using Qiskit to demonstrate their role in quantum algorithms (e.g., Grover's algorithm).
     - Visualize the circuit involving an oracle.
     
-**Intermediate modules (Algorithms)**
+**Intermediate modules (Algorithms run on IBM Quantum System One)**
   - Deutsch's
     - Introduce Deutsch's algorithm, problem statement (constant vs. balanced function), and its significance in quantum computing.
     - Provide step-by-step code implementation with visualizations.
@@ -97,9 +97,21 @@ The emerging field of quantum computing offers the opportunity for new career pa
 #### <ins>01/01/2025 - 04/01/2025</ins>
 **Advanced modules (Applications)**
   - Simulation
+    - Introduce quantum simulation and significance in studying quantum systems.
+    - Dive into ```qiskit-aer``` and their quantum circuit simulation to construct example simulations.
+    - Present simulation results.
   - Chemistry/Drug discovery
+    - Explain role of quantum computing in chemistry and drug discovery (e.g., how algorithms can model molecular interactions).
+    - Provide step-by-step guide to simulating molecular systems using VQE or other algorithms.
+    - Discuss results, accuracy and potential impacts.
   - Machine Learning
+    - Introduce quantum machine learning and potential to enhance classical machine learning methods (e.g., quantum data representation).
+    - Use quantum-inspired algorithms or quantum classifiers in various applications.
+    - Analyze performance of quantum models compared to classical counterparts.
   - Cryptography
+    - Explain potential for quantum computing to enhance cryptography.
+    - Provide example use cases of quantum cryptographic protocols (e.g., QKD in network).
+    - Analyze security and potential vulnerabilities.
 
 ### Long Term Goals
 
