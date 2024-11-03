@@ -19,22 +19,30 @@ The emerging field of quantum computing offers the opportunity for new career pa
 
 ### Goals & Milestones
 #### <ins>11/01/2024 - 01/01/2025</ins>
-**Beginner modules (Concept Visualization and Usage)**
+**Introductory modules (Concepts)**
 - Qubits
   - Superposition
-    - Introduce concept of qubits and ability to exist in multiple states
-    - Use Qiskit to visualize superposition states with Hadamard gates to start.
+    - Start with a $\ket{0}$ state.
+    - Use Hadamard gate to generate a superposition state.
   - Bloch Sphere
-    - Explain Bloch Sphere representation of qubits.
-    - Use ```qiskit_visualization.plot_bloch_multivector``` to visualize states and other examples on Sphere.
+    - Identify the named states on the Bloch Sphere:
+      - North pole
+      - South pole
+      - $\ket{+}$
+      - $\ket{-}$
+      - $\ket{i}$
+      - $\ket{-i}$
   - Measurement
-    - Define measurement and its importance (maybe dive into pulse-level programming).
-    - Use ```QuantumCircuit.measure``` to implement measurement and observe collapsed state.
-    - Include comparison of measurement outcomes before and after applying gates.
+    - Start with a $\ket{0}$ state.
+    - Use Hadamard gate to generate a superposition state.
+    - Apply measurement on the resulting state (ensure measurement outputs to classical bit).
+    - Set up and run the circuit.
   - Entanglement
-    - Introduce concept of entangled states.
-    - Construct simple entangled state (e.g., Bell State) using Qiskit.
-    - Visualize using ```qiskit.visualization.plot_state_qsphere```.
+    - Start with a $\ket{00}$ state.
+    - Use Hadamard gate on first qubit to generate a superposition state.
+    - Apply CNOT gate, with first qubit as control and second qubit as target.
+    - Measure both qubits.
+    - Set up and run the circuit.
 - Gates
   - Common Gates
     - Describe commonly used gates (e.g., X, Y, Z, H)
