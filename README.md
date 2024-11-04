@@ -68,7 +68,7 @@ The emerging field of quantum computing offers the opportunity for new career pa
       - $\ket{\psi^{-}}$ : Follow same steps as $\ket{\psi^{+}}$. Apply $Z$ gate on first qubit.
     - Apply measurement on both qubits, set up, and run the circuit.
   - GHZ State
-    - Start with a $\ket{000}$ state
+    - Start with a $\ket{000}$ state.
     - Use Hadamard gate on first qubit to generate superposition state.
     - Apply CNOT gate, with first qubit as control and second qubit as target.
     - Apply another CNOT gate, with first qubit as control and third qubit as target.
@@ -81,11 +81,11 @@ The emerging field of quantum computing offers the opportunity for new career pa
       - Add a third additional qubit (ancilla).
       - Apply a CNOT gate, with first qubit as control and third qubit as target.
       - Apply another CNOT gate, with second qubit as control and third qubit as target.
-      - Measure the ancilla qubit. 
+      - Measure the ancilla qubit.
   - Oracles
     - Construct a simple oracle where $f(x) = x$.
       - Start with a $\ket{0}$ state. This will be the target qubit, $\ket{y}$.
-      - Initialize a second qubit, $\ket{x}$, as $\ket{0}$ or $\ket{1}$.
+      - Initialize a second qubit, $\ket{x}$, as $\ket{0}$ or $\ket{1}$ by applying $X$ gate.
       - Apply a CNOT gate, with the second qubit as control and first qubit as target. ( $\ket{y} \rightarrow \ket{y ⊕ x}$ )
       - Measure each qubit.
     
