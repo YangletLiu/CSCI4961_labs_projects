@@ -75,18 +75,19 @@ The emerging field of quantum computing offers the opportunity for new career pa
     - Measure each qubit, set up, and run the circuit.
   - Error Codes
     - Showcase simple error. 
-      - Start with a $\ket{0}$ state.
-      - Use Hadamard gate to generate superposition state.
-      - Apply $X$ gate to simulate bit flip error.
-    - Construct simple error detection/correction.
-      - Start new quantum circuit with the $\ket{000}$ state.
-      - Apply two CNOT gates, one from first qubit to the second and another from the first qubit to the third.
-      - Apply $X$ gate to second qubit to simulate bit flip error.
-      - Measure each qubit.
+      - Start with a $\ket{00}$ state.
+      - Apply $X$ gate on the second qubit to simulate bit flip error.
+    - Construct simple error detection (parity checking).
+      - Add a third additional qubit (ancilla).
+      - Apply a CNOT gate, with first qubit as control and third qubit as target.
+      - Apply another CNOT gate, with second qubit as control and third qubit as target.
+      - Measure the ancilla qubit. 
   - Oracles
-    - Define what oracles are in quantum computing.
-    - Create a simple oracle function using Qiskit to demonstrate their role in quantum algorithms (e.g., Grover's algorithm).
-    - Visualize the circuit involving an oracle.
+    - Construct a simple oracle where $f(x) = x$.
+      - Start with a $\ket{0}$ state. This will be the target qubit, $\ket{y}$.
+      - Initialize a second qubit, $\ket{x}$, as $\ket{0}$ or $\ket{1}$.
+      - Apply a CNOT gate, with the second qubit as control and first qubit as target. ( $\ket{y} \rightarrow \ket{y ⊕ x}$ )
+      - Measure each qubit.
     
 **Intermediate modules (Algorithms run on IBM Quantum System One)**
   - Deutsch's
