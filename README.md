@@ -49,6 +49,7 @@ The emerging field of quantum computing offers the opportunity for new career pa
     - Apply the common gates:
       - Identity
       - Pauli $X$ , $Y$ , $Z$
+      - Hadamard $H$
       - Phase Gate $S$
       - $T$ Gate
     - Measure the resulting states.
