@@ -89,16 +89,18 @@ The emerging field of quantum computing offers the opportunity for new career pa
       - Initialize a second qubit, $\ket{x}$, as $\ket{0}$ or $\ket{1}$ by applying $X$ gate.
       - Apply a CNOT gate, with the second qubit as control and first qubit as target. ( $\ket{y} \rightarrow \ket{y ⊕ x}$ )
       - Measure each qubit.
+    - Construct a simple **phase** oracle where $f(x) = x$.
+      - Start with a $\ket{0}$ state. This will be the target qubit, $\ket{y}$.
+      - Apply a $X$ gate, followed by a Hadamard gate, to create the $\ket{-}$ state.
+      - Initialize a second qubit, $\ket{x}$, as $\ket{0}$ or $\ket{1}$ by applying $X$ gate.
+      - Apply a CNOT gate, with the second qubit as control and first qubit as target. ( $\ket{y} \rightarrow \ket{y ⊕ x}$ )
+      - Measure each qubit.
     
 **Intermediate modules (Algorithms run on IBM Quantum System One)**
   - Deutsch's
-    - Introduce Deutsch's algorithm, problem statement (constant vs. balanced function), and its significance in quantum computing.
-    - Provide step-by-step code implementation with visualizations.
-    - Show how to interpret results and compare classical vs. quantum runtime/solutions.
+    - 
   - Bernstein's
-    - Describe Bernstein-Vazirani algorithm, problem statement (querying hidden string), and classical approach.
-    - Provide step-by-step code implementation with visualizations.
-    - Show how to interpret results and compare classical vs. quantum runtime/solutions.
+    - 
   - Variational Quantum Eigensolver (VQE)
     - Introduce VQE and its application in finding the ground state energy of quantum systems.
     - Provide step-by-step code implementation with visualizations.
