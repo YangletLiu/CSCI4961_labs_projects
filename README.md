@@ -98,9 +98,22 @@ The emerging field of quantum computing offers the opportunity for new career pa
     
 **Intermediate modules (Algorithms run on IBM Quantum System One)**
   - Deutsch's
-    - 
+    - Start with a $\ket{0}$ state. This will be the target qubit, $\ket{y}$.
+    - Initialize a second qubit, $\ket{x}$, as the answer qubit, $\ket{-}$. (Apply $X$ and $H$ to $\ket{0}$)
+    - Apply $H$ gate to the target qubit.
+    - Construct the oracle $U_f$. (Depends on specific function. Here we construct oracle for $f(x) = x'$ or '10'.)
+      - Apply CNOT gate, with first qubit as control and second qubit as target.
+      - Apply $X$ gate to answer qubit.
+      - Apply $H$ gate to target qubit.
+    - Measure our target qubit.
   - Bernstein's
-    - 
+    - Start with a $\ket{000}$ state and 3 classical bits.
+    - Initialize fourth qubit as $\ket{-}$.
+    - Apply $H$ on the first, second, and third qubits.
+    - Construct oracle $U_f$. (Oracle for '101')
+      - Apply CNOT gate, with first qubit as control and fourth qubit as target.
+      - Apply CNOT gate, with third qubit as control and fourth qubit as target.
+    - Measure first, second, and third qubits.
   - Variational Quantum Eigensolver (VQE)
     - Introduce VQE and its application in finding the ground state energy of quantum systems.
     - Provide step-by-step code implementation with visualizations.
