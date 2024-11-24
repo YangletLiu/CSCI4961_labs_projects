@@ -64,9 +64,9 @@ The emerging field of quantum computing offers the opportunity for new career pa
     - Start with a $\ket{00}$ state.
     - Construct each Bell State:
       - $\ket{\phi^{+}}$ : Use Hadamard gate on first qubit and apply CNOT gate with first qubit as control and second qubit as target.
-      - $\ket{\phi^{-}}$ : Follow same steps as $\ket{\phi^{+}}$. Apply $Z$ gate on first qubit.
-      - $\ket{\psi^{+}}$ : Follow same steps as $\ket{\phi^{+}}$. Apply $X$ gate on first qubit.
-      - $\ket{\psi^{-}}$ : Follow same steps as $\ket{\psi^{+}}$. Apply $Z$ gate on first qubit.
+      - $\ket{\phi^{-}}$ : Follow same steps as $\ket{\phi^{+}}$. Apply $Z$ gate on first qubit before the CNOT.
+      - $\ket{\psi^{+}}$ : Follow same steps as $\ket{\phi^{+}}$. Apply $X$ gate on second qubit before the CNOT.
+      - $\ket{\psi^{-}}$ : Follow same steps as $\ket{\psi^{+}}$. Apply a $Z$ gate on first qubit and second qubit before the CNOT.
     - Apply measurement on both qubits, set up, and run the circuit.
   - GHZ State
     - Start with a $\ket{000}$ state.
