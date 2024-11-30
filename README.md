@@ -64,9 +64,9 @@ The emerging field of quantum computing offers the opportunity for new career pa
     - Start with a $\ket{00}$ state.
     - Construct each Bell State:
       - $\ket{\phi^{+}}$ : Use Hadamard gate on first qubit and apply CNOT gate with first qubit as control and second qubit as target.
-      - $\ket{\phi^{-}}$ : Follow same steps as $\ket{\phi^{+}}$. Apply $Z$ gate on first qubit.
-      - $\ket{\psi^{+}}$ : Follow same steps as $\ket{\phi^{+}}$. Apply $X$ gate on first qubit.
-      - $\ket{\psi^{-}}$ : Follow same steps as $\ket{\psi^{+}}$. Apply $Z$ gate on first qubit.
+      - $\ket{\phi^{-}}$ : Follow same steps as $\ket{\phi^{+}}$. Apply $Z$ gate on first qubit before the CNOT.
+      - $\ket{\psi^{+}}$ : Follow same steps as $\ket{\phi^{+}}$. Apply $X$ gate on second qubit before the CNOT.
+      - $\ket{\psi^{-}}$ : Follow same steps as $\ket{\psi^{+}}$. Apply a $Z$ gate on first qubit and second qubit before the CNOT.
     - Apply measurement on both qubits, set up, and run the circuit.
   - GHZ State
     - Start with a $\ket{000}$ state.
@@ -88,13 +88,13 @@ The emerging field of quantum computing offers the opportunity for new career pa
       - Start with a $\ket{0}$ state. This will be the target qubit, $\ket{y}$.
       - Initialize a second qubit, $\ket{x}$, as $\ket{0}$ or $\ket{1}$ by applying $X$ gate.
       - Apply a CNOT gate, with the second qubit as control and first qubit as target. ( $\ket{y} \rightarrow \ket{y ⊕ x}$ )
-      - Measure each qubit.
+      - Measure target qubit, $\ket{y}$.
     - Construct a simple **phase** oracle where $f(x) = x$.
       - Start with a $\ket{0}$ state. This will be the target qubit, $\ket{y}$.
       - Apply a $X$ gate, followed by a Hadamard gate, to create the $\ket{-}$ state.
       - Initialize a second qubit, $\ket{x}$, as $\ket{0}$ or $\ket{1}$ by applying $X$ gate.
       - Apply a CNOT gate, with the second qubit as control and first qubit as target. ( $\ket{y} \rightarrow \ket{y ⊕ x}$ )
-      - Measure each qubit.
+      - Measure input qubit, $\ket{x}$.
     
 **Intermediate modules (Algorithms run on IBM Quantum System One)**
   - Deutsch's
