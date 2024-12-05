@@ -20,7 +20,7 @@ def get_stock(start, end, stock, restricted_days):
     '''
     
     yfd = yf.download(stock, start=start, end=end)
-    df = pd.DataFrame({'Close': yfd['Close']})
+    df = yfd['Close'].copy()
     df = df.dropna().reset_index(drop=True)
 
     restricted_df = np.array(df[len(df) - restricted_days:]) # last 100 days prices
