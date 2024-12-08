@@ -1,31 +1,13 @@
 import os
 os.environ['KMP_DUPLICATE_LIB_OK']='True'
 import copy
-from torch.autograd import Variable
-import os
-import functools
 import time
 import torch.nn as nn
 import numpy as np
 from typing import List, Union, Tuple
 import networkx as nx
-import pandas as pd
-import torch as th
 from torch import Tensor
-from os import system
-import math
-from enum import Enum
-import tqdm
-import re
-try:
-    import matplotlib as mpl
-    import matplotlib.pyplot as plt
-except ImportError:
-    plt = None
 
-TEN = th.Tensor
-INT = th.IntTensor
-TEN = th.Tensor
 GraphList = List[Tuple[int, int, int]]
 IndexList = List[List[int]]
 
@@ -96,12 +78,6 @@ def obj_maxcut(result: Union[Tensor, List[int], np.array], graph: nx.Graph):
                 obj += adj_matrix[(i, j)]
     return obj
 
-
-
-
-
-
-
 def load_graph_from_txt(txt_path: str = './data/gset_14.txt'):
     with open(txt_path, 'r') as file:
         lines = file.readlines()
@@ -125,4 +101,3 @@ def save_graph_info_to_txt(txt_path, graph, num_nodes, num_edges):
         formatted_content += " ".join(str(item) for item in row) + "\n"
     with open(txt_path, "w") as file:
         file.write(formatted_content)
-
