@@ -16,7 +16,27 @@ Given two qubits with initial state $\ket{q_1q_0} = \ket{00}$ and a universal ga
 | Reward function $\mathcal{R}$: R(s, a) = 100 if we reach the target state $U = \ket{\Phi^+}$, otherwise R(s, a) = 0  |  Reward function $\mathcal{R}$: R(s, a) = 100 if we reach the target state $U = I_4$, otherwise R(s, a) = 0  |
 
 ## Q-Learning
+The Q-Learning algorithm updates a Q-table during each iteration using the following formula: <br> <br>
+$Q^{\text{new}}(S_t, A_t) \leftarrow (1-\alpha) \cdot Q(S_t, A_t) + \alpha \cdot \left(R_{t+1} + \gamma \cdot \max_{a} Q(S_{t+1}, a)\right)$
+<br> <br>
+where $\alpha$ is the learning rate, <br>
+&emsp;&emsp;&nbsp;&nbsp; $Q(S_t, A_t)$ is the current value, <br>
+&emsp;&emsp;&nbsp;&nbsp; $R_{t+1}$ is the current reward, <br>
+&emsp;&emsp;&nbsp;&nbsp; $\gamma$ is the discount factor, <br>
+&emsp;&emsp;&nbsp; $\max_{a} Q(S_{t+1}, a)$ is the estimate of optimal future value
 
+After a sufficient number of iterations, the Q-table converges. Once training is complete, each agent uses its learned Q-table to attempt generating the target circuit in a test environment, selecting the highest Q-value for each state.
 
+<b> Example </b>
+
+![image](https://github.com/user-attachments/assets/473c3806-5202-4d72-9bc9-1213e701b51b)
+
+Following Table 1, at initial state $S_0$, we take action $a = H_0$ and obtain state $S_1$. At state $S_1$, we take  action $a = \text{CNOT}_{01}$ and obtain the target circuit, $\ket{\Phi^+}$.
 
 ## Deep Q-Networks (DQNs)
+Deep Q-Networks use neural networks to approximate Q-values for each state-action pair. This approach allows DQN to handle environments with larger or continuous state spaces, where maintaining a Q-table is impractical. <br> <br>
+For each learning episode, the agent finds the highest Q-value action according to the policy network and chooses the action using Epsilon-Greedy Policy. After each action, the resulting experience—comprising the current state ($s$), the action taken ($a$), the reward received ($R$), the subsequent state ($s'$), and a terminal indicator ($d$)—is stored in the replay buffer.
+
+The DQN algorithm utilizes two neural networks:
+- Policy Network: This network is used for action selection during training. It consists of three fully connected layers, each with 128 units. The inputted state passes through these layers, where linear transformations and ReLU activations are applied, resulting in the expected Q-values for each action.
+- Target Network: A separate network that stabilizes training by holding fixed parameters for target computation. It is periodically updated with the policy network's weights to mitigate fluctuations and enhance training stability.
