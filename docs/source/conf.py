@@ -44,6 +44,6 @@ html_context = {
     "display_github": True, # Integrate GitHub
     "github_user": "Chriun", # Username
     "github_repo": "CSCI4961_labs_projects", # Repo name
-    "github_version": "master", # Version
+    "github_version": "main", # Version
     "conf_py_path": "/docs/source/", # Path in the checkout to the docs root
 }
