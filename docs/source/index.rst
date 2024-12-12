@@ -6,10 +6,7 @@
 CSCI4961_labs_projects documentation
 ====================================
 
-Add your content using ``reStructuredText`` syntax. See the
-`reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
-documentation for details.
-
+`Quantum Education Modules <https://github.com/YangletLiu/CSCI4961_labs_projects>`_ is an open source hands-on modular approach centered around labs and projects, designed to supplement theory through engagement in guided practical experiments using Jupyter notebooks and RPI's IBM Quantum System One. We aim to integrate this approach into current and future quantum course offerings, accelerating the development of practical quantum computing skills and advancing the educational landscape for emerging quantum technologies.
 
 .. toctree::
    :maxdepth: 2
