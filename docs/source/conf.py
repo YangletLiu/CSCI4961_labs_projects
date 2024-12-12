@@ -3,6 +3,11 @@
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 
+# -- Path Setup --------------------------------------------------------------
+import os
+import sys
+sys.path.insert(0, os.path.abspath('.'))
+
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
@@ -34,3 +39,11 @@ exclude_patterns = []
 html_theme = "sphinx_rtd_theme"
 
 html_static_path = ['_static']
+
+html_context = {
+    "display_github": True, # Integrate GitHub
+    "github_user": "Chriun", # Username
+    "github_repo": "CSCI4961_labs_projects", # Repo name
+    "github_version": "master", # Version
+    "conf_py_path": "/docs/source/", # Path in the checkout to the docs root
+}
