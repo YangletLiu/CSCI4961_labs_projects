@@ -23,7 +23,8 @@ extensions = [
     "sphinx.ext.doctest",
     "sphinx.ext.viewcode",
     "sphinx.ext.githubpages",
-    'sphinx_rtd_theme'
+    "sphinx.ext.mathjax",
+    "sphinx_rtd_theme",
 ]
 
 templates_path = ['_templates']

@@ -5,17 +5,20 @@
 
 Welcome to Quantum Education Modules!
 =====================================
+
 .. image:: ./images/quantumcomputer.jpg
    :width: 50%
    :align: center
 
 
-`Quantum Education Modules <https://github.com/YangletLiu/CSCI4961_labs_projects>`_ is an open source hands-on modular approach centered around labs and projects, designed to supplement theory through engagement in guided practical experiments using Jupyter notebooks and RPI's IBM Quantum System One. 
+.. toctree::
+    :maxdepth: 1
+    :hidden:
 
-We aim to integrate this approach into current and future quantum course offerings, accelerating the development of practical quantum computing skills and advancing the educational landscape for emerging quantum technologies.
+    Home <self>
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: User Documentation
 
    user/introduction
