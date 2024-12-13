@@ -1,5 +1,8 @@
 # CSCI4961 Introduction to Quantum Computing: Labs and Projects
 
+[Website](https://yangletliu.github.io/Intro-to-Quantum-Computing-Website/) \
+[Documentation](https://csci4961-labs-projects.readthedocs.io/en/latest/index.html)
+
 ## Overview
 
 CSCI 4961 Introduction to Quantum Computing hopes to connect theory with practice, equipping students with the skills necessary to excel in future industry and academic endeavors. As an introductory course, CSCI 4961 covers fundamental quantum computing concepts such as superposition, entanglement, and quantum algorithms. We adopt a hands-on modular approach focused on labs and projects, supplementing theory through engagement in guided practical experiments using Jupyter notebooks and RPI's **IBM Quantum System One**. In this sense, we aim for anyone working on these modules, whether in development or for course labs/projects, to become **quantum-proficient**. Our goal is to expand upon the modules for future iterations of this course and other quantum-related courses at RPI.
