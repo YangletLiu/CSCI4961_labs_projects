@@ -11,4 +11,4 @@ Superposition
 ..    :local:
 
      .. docs/src/modules/introductory/qubits/superposition
-.. nbsphinx:: ../../../../../Modules/Concepts/Superposition/superposition.ipynb
+.. nbsphinx:: ../../../../../../Modules/Concepts/Superposition/superposition.ipynb
