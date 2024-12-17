@@ -3,6 +3,7 @@ Introduction
 ============
 
 .. contents:: Table of Contents
+   :local:
 
 Description
 ===========
