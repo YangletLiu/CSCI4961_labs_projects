@@ -8,6 +8,7 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('.'))
 sys.path.insert(0, os.path.abspath('../../'))
+sys.path.insert(0, os.path.abspath(os.path.join("../../", "modules")))
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
@@ -27,6 +28,7 @@ extensions = [
     "sphinx.ext.mathjax",
     "sphinx_rtd_theme",
     "nbsphinx",
+    "nbsphinx_link",
 ]
 
 templates_path = ['_templates']
@@ -52,4 +54,13 @@ html_context = {
     "github_repo": "CSCI4961_labs_projects", # Repo name
     "github_version": "main", # Version
     "conf_py_path": "/docs/source/", # Path in the checkout to the docs root
+}
+
+latex_elements = {
+    'preamble': r'''
+    \usepackage{amsmath}
+    \usepackage{braket}
+    \usepackage{algorithm}
+    \usepackage{algorithmic}
+    '''
 }
