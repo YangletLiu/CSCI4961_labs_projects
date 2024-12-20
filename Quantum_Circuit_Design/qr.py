@@ -178,8 +178,8 @@ class QLearningAgent:
             [HGate(), [1]],
             [CXGate(), [0, 1]],
             [CXGate(), [1, 0]],
-            [TGate(), [0]],
-            [TGate(), [1]],
+            [TdgGate(), [0]],
+            [TdgGate(), [1]],
         ]
         
         return possible_actions[action],action
@@ -193,8 +193,8 @@ class QLearningAgent:
             [HGate(), [1]],
             [CXGate(), [0, 1]],
             [CXGate(), [1, 0]],
-            [TGate(), [0]],
-            [TGate(), [1]],
+            [TdgGate(), [0]],
+            [TdgGate(), [1]],
         ]
         
         return possible_actions[action],action
