@@ -9,6 +9,7 @@ Welcome to Quantum Education Modules!
 .. image:: ./images/quantumcomputer.jpg
    :width: 50%
    :align: center
+   :class: custom-img
 
 
 .. toctree::
@@ -24,3 +25,11 @@ Welcome to Quantum Education Modules!
    user/introduction
    user/roadmap
    user/usage
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Modules
+
+   modules/introductory/index
+   modules/intermediate/index
+   modules/advanced/index

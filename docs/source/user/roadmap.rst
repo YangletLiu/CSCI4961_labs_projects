@@ -3,6 +3,7 @@ Roadmap
 =======
 
 .. contents:: Table of Contents
+   :local:
 
 Introductory modules (Concepts, Gates, Circuits)
 ================================================
