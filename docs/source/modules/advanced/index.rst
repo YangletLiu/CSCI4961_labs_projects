@@ -5,4 +5,4 @@ Advanced Modules
    :maxdepth: 1
    :caption: Applications
 
-   placeholder
+   quantumSensing/index
