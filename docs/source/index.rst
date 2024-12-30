@@ -28,12 +28,24 @@ Welcome to Quantum Education Modules!
    user/contribute
 
 .. toctree::
-   :maxdepth: 3
-   :caption: Modules
+   :maxdepth: 2
+   :caption: Introductory Modules
 
-   modules/introductory/index
-   modules/intermediate/index
-   modules/advanced/index
+   introductory/qubits/index
+   introductory/gates/index
+   introductory/circuits/index
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: Intermediate Modules
+
+   intermediate/placeholder
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Advanced Modules
+
+   advanced/quantumSensing/index
 
 .. toctree::
    :maxdepth: 2
