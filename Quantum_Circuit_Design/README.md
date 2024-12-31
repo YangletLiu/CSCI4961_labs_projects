@@ -12,7 +12,7 @@ Given two qubits with initial state $\ket{q_1q_0} = \ket{00}$ and a universal ga
 | -------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
 | ![0](https://github.com/user-attachments/assets/d9491377-228e-46f4-9ad0-48fe751953d2)  | ![1](https://github.com/user-attachments/assets/c20ed46c-3d57-4de0-a14b-570216dda005)  |
 |            Actions $\mathcal{A}$ = { $H_0,H_1,T_0,T_1,\text{CNOT}_{01}$ }              |Actions $\mathcal{A}^{-1}$ = { $H_0^{-1},H_1^{-1},T_0^{-1},T_1^{-1},\text{CNOT}_{01}^{-1}$ }|
-| State Space $\mathcal{S}$: Represented in the above tree <br> Initial State $U_0 = I_4$, Target State $U = \ket{\Phi^+}$ | State Space $\mathcal{S}$: Represented in the above tree <br> Initial State $U_0 = \ket{\Phi^+}$, Target State $U = I_4$  |
+| State Space $\mathcal{S}$: Represented in the above tree <br> Initial State $U_0 = I_4$, Target State $U = \ket{\Phi^+}$ | State Space $\mathcal{S^{-1}}$: Represented in the above tree <br> Initial State $U_0 = \ket{\Phi^+}$, Target State $U = I_4$  |
 | Reward function $\mathcal{R}$: R(s, a) = 100 if we reach the target state $U = \ket{\Phi^+}$, otherwise R(s, a) = 0  |  Reward function $\mathcal{R}$: R(s, a) = 100 if we reach the target state $U = I_4$, otherwise R(s, a) = 0  |
 
 ## Q-Learning
