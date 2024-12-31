@@ -45,7 +45,7 @@ Welcome to Quantum Education Modules!
    :maxdepth: 2
    :caption: Advanced Modules
 
-   advanced/quantumSensing/index
+   advanced/quantum_sensing/index
 
 .. toctree::
    :maxdepth: 2
