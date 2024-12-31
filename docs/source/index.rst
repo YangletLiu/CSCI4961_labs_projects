@@ -19,17 +19,36 @@ Welcome to Quantum Education Modules!
     Home <self>
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: User Documentation
 
    user/introduction
    user/roadmap
    user/usage
+   user/contribute
 
 .. toctree::
-   :maxdepth: 1
-   :caption: Modules
+   :maxdepth: 2
+   :caption: Introductory Modules
 
-   modules/introductory/index
-   modules/intermediate/index
-   modules/advanced/index
+   introductory/qubits/index
+   introductory/gates/index
+   introductory/circuits/index
+   
+.. toctree::
+   :maxdepth: 2
+   :caption: Intermediate Modules
+
+   intermediate/placeholder
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Advanced Modules
+
+   advanced/quantum_sensing/index
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Quantum Circuit Design
+
+   quantum_circuit_design/introduction

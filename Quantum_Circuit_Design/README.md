@@ -40,3 +40,15 @@ For each learning episode, the agent finds the highest Q-value action according 
 The DQN algorithm utilizes two neural networks:
 - Policy Network: This network is used for action selection during training. It consists of three fully connected layers, each with 128 units. The inputted state passes through these layers, where linear transformations and ReLU activations are applied, resulting in the expected Q-values for each action.
 - Target Network: A separate network that stabilizes training by holding fixed parameters for target computation. It is periodically updated with the policy network's weights to mitigate fluctuations and enhance training stability.
+
+<b> Generalized Example </b>
+
+![image](https://github.com/user-attachments/assets/3826e698-2262-4994-9175-04c719758808)
+
+The DQN Loss Function is calculated as the Mean Squared Error (MSE) between the predicted Q-values and target Q-values: <br> <br>
+$L_{\theta}= \text{MSE} \left( Q(s, a | \theta_{policy}), R + \gamma \cdot \max_{a'} Q(s', a' | \theta_{target}) \right)$
+<br><br> 
+where $Q(s, a | \theta_{policy})$ is the Q-value predicted by the policy network for the current state-action pair, <br>
+&emsp;&emsp;&nbsp;&nbsp; $R$ is the immediate reward, <br>
+&emsp;&emsp;&nbsp;&nbsp; $\gamma$ is the discount factor, <br>
+&emsp;&emsp;&nbsp; $\max_{a'} Q(s', a' | \theta_{target})$ is the future Q-value estimated using the target network
