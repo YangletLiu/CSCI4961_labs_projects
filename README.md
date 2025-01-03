@@ -1,4 +1,4 @@
-# CSCI4961 Introduction to Quantum Computing: Labs and Projects
+# CSCI4961 Introduction to Quantum Computing: Experiment Modules for Labs and Projects
 
 [Website](https://yangletliu.github.io/Intro-to-Quantum-Computing-Website/) \
 [Documentation](https://csci4961-labs-projects.readthedocs.io/en/latest/index.html)
